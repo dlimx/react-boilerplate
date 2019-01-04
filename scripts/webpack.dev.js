@@ -18,21 +18,25 @@ module.exports = merge(common, {
         use: ['html-loader'],
       },
       {
-        test: /\.(css|scss|sass)$/,
+        test: /\.(css|less)$/,
         include: path.join(__dirname, '..', 'src', 'theme'),
-        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
+        use: ['style-loader', 'css-loader', 'postcss-loader', 'less-loader'],
       },
       {
-        test: /\.(css|scss|sass)$/,
+        test: /\.(css|less)$/,
         exclude: path.join(__dirname, '..', 'src', 'theme'),
         use: [
           'style-loader',
           'css-loader?modules',
           'postcss-loader',
           {
-            loader: 'sass-loader',
+            loader: 'less-loader',
             options: {
               includePaths: [path.join(__dirname, '..', 'src', 'theme')],
+              paths: [
+                path.join(__dirname, '..', 'node_modules'),
+                path.join(__dirname, '..', 'src', 'theme'),
+              ],
             },
           },
         ],

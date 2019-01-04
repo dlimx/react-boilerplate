@@ -26,7 +26,7 @@ module.exports = merge(common, {
         },
       },
       {
-        test: /\.(css|scss|sass)$/,
+        test: /\.(css|less)$/,
         include: path.join(__dirname, '..', 'src', 'theme'),
         use: [
           {
@@ -34,16 +34,11 @@ module.exports = merge(common, {
           },
           'css-loader',
           'postcss-loader',
-          {
-            loader: 'sass-loader',
-            options: {
-              includePaths: [path.join(__dirname, '..', 'src', 'theme')],
-            },
-          },
+          'less-loader',
         ],
       },
       {
-        test: /\.(css|scss|sass)$/,
+        test: /\.(css|less)$/,
         exclude: path.join(__dirname, '..', 'src', 'theme'),
         use: [
           {
@@ -52,9 +47,13 @@ module.exports = merge(common, {
           'css-loader?modules',
           'postcss-loader',
           {
-            loader: 'sass-loader',
+            loader: 'less-loader',
             options: {
-              includePaths: [path.join(__dirname, '..', 'src', 'theme')],
+              sourceMap: true,
+              paths: [
+                path.join(__dirname, '..', 'node_moudles'),
+                path.join(__dirname, '..', 'src', 'theme'),
+              ],
             },
           },
         ],

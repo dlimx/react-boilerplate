@@ -17,7 +17,7 @@ export default class Navbar extends Component {
         <Link className={styles.link} to="/discover">
           Discover
         </Link>
-        <Link className={styles.link} to="/organize">
+        <Link className={styles.link} to="/organization">
           Organize
         </Link>
         <Link className={styles.link} to="/connections">

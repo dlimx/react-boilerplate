@@ -3,21 +3,21 @@
 // Sass Modules
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
-@import 'Colors';
-@import 'Blockquote';
-@import 'Button';
-@import 'Code';
-@import 'Divider';
-@import 'Form';
-@import 'Grid';
-@import 'Link';
-@import 'List';
-@import 'Spacing';
-@import 'Table';
-@import 'Typography';
-@import 'Image';
-@import 'Utility';
-@import 'Variables';
+@import '_Colors';
+@import '_Blockquote';
+@import '_Button';
+@import '_Code';
+@import '_Divider';
+@import '_Form';
+@import '_Grid';
+@import '_Link';
+@import '_List';
+@import '_Spacing';
+@import '_Table';
+@import '_Typography';
+@import '_Image';
+@import '_Utility';
+@import '_Variables';
 
 // Set box-sizing globally to handle padding and border widths
 *,
@@ -35,7 +35,7 @@ html {
 
 // Default body styles
 body {
-	color: $color-text;
+	color: @color-text;
 	font-size: 1.6em; // Currently ems cause chrome bug misinterpreting rems on body element
 	font-weight: 300;
 	letter-spacing: .01em;

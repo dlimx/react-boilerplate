@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import styles from './styles.scss';
+import styles from './styles.less';
 
 export default class Organization extends Component {
   render() {
