@@ -1,0 +1,15 @@
+@import '_Variables';
+
+.navbar {
+  padding: $padding;
+}
+
+.title {
+  font-size: 3rem;
+}
+
+.link {
+  font-size: $padding;
+  display: flex;
+  margin: $padding 0px;
+}

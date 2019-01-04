@@ -1,0 +1,53 @@
+// INLINED FROM https://github.com/milligram/milligram-scss
+
+// Sass Modules
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@import 'Colors';
+@import 'Blockquote';
+@import 'Button';
+@import 'Code';
+@import 'Divider';
+@import 'Form';
+@import 'Grid';
+@import 'Link';
+@import 'List';
+@import 'Spacing';
+@import 'Table';
+@import 'Typography';
+@import 'Image';
+@import 'Utility';
+@import 'Variables';
+
+// Set box-sizing globally to handle padding and border widths
+*,
+*:after,
+*:before {
+	box-sizing: inherit;
+}
+
+// The base font-size is set at 62.5% for having the convenience
+// of sizing rems in a way that is similar to using px: 1.6rem = 16px
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+}
+
+// Default body styles
+body {
+	color: $color-text;
+	font-size: 1.6em; // Currently ems cause chrome bug misinterpreting rems on body element
+	font-weight: 300;
+	letter-spacing: .01em;
+	line-height: 1.6;
+	font-family: 'Helvetica Neue', 'Helvetica', 'Roboto', 'Arial', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Montserrat', sans-serif;
+}
